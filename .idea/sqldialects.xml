@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Api/group/api_create_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_delete_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_get_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_get_groups.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_update_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/router/router.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/subject/api_create_subject.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/user/api_create_user.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/user/api_login.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/collections/get_collections.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/comments/get_comment.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/comments/get_comments.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_groups.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/grouppen.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/init.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/solutions/get_solutions.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/subjects/get_subjects.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/tasks/get_tasks.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/users/user.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/test_func.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/tests/users/test_add_user.sql" dialect="PostgreSQL" />
+  </component>
+</project>
