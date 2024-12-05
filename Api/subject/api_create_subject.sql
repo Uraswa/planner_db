@@ -1,5 +1,5 @@
 drop function if exists api_create_subject;
-create function api_create_subject(usr_id integer, json jsonb) returns jsonb
+create function api_create_subject(usr_id integer,  usr_type user_type, json jsonb) returns jsonb
 as
 $$
 declare
@@ -11,9 +11,9 @@ declare
     created_entity_id integer;
 begin
     subject_name := jsonb_extract_path_text(json, 'name');
-    grp_id := (SELECT CAST(jsonb_extract_path_text(json, 'group_id') AS INTEGER));
+    grp_id := (SELECT CAST(jsonb_extract_path_text(json, 'father_entity_id') AS INTEGER));
 
-    grp_member := get_group_member(usr_id := usr_id, gr_id := grp_id);
+    grp_member := src_get_group_member(usr_id := usr_id, gr_id := grp_id);
     IF grp_member.user_id IS NULL or grp_member.is_banned = TRUE THEN
         return '{"success": false, "error": "Ошибка доступа"}';
     end if;
@@ -24,4 +24,3 @@ begin
     return '{"success": true, "entity_id": ' || created_entity_id ||'}';
 end;
 $$ language plpgsql;
-SELECT api_create_subject(19, '{"name": "dada", "group_id":  13}')

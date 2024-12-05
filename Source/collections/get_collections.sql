@@ -1,5 +1,5 @@
 drop function if exists src_get_collections;
-create function src_get_collections(usr_id integer, sb_id integer, perPage integer, page integer)
+create function src_get_collections(usr_id integer, usr_type user_type, sb_id integer, perPage integer, page integer)
 returns TABLE (collection_id integer, name varchar, can_modify boolean)
 as
 $$
@@ -9,10 +9,10 @@ $$
 begin
     offst := (page - 1) * perPage;
 
-    SELECT
+    RETURN QUERY SELECT
     col.collection_id as collection_id,
     col.name as name,
-    (gm.is_creator or col.creator_id) as can_modify
+    (gm.is_creator or col.creator_id = usr_id) as can_modify
     FROM collection col
     JOIN subject sb ON col.subject_id = sb.subject_id
     JOIN user_group gr on (gr.group_id = sb.group_id)

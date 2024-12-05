@@ -1,5 +1,5 @@
 drop function if exists src_get_subjects;
-create function src_get_subjects(usr_id integer, grp_id integer, perPage integer, page integer)
+create function src_get_subjects(usr_id integer, usr_type user_type, grp_id integer, perPage integer, page integer)
 returns TABLE (subject_id integer, name varchar, can_modify boolean)
 as
 $$

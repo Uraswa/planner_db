@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Api/collection/api_create_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_delete_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_get_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_get_collections.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_subscribe_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_unsubscribe_from_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/collection/api_update_collection.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/comment/api_create_comment.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/comment/api_delete_comment.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/comment/api_update_comment.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_create_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_delete_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_exit_from_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_get_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_get_groups.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_group_kick_user.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_update_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/plan/get_daily_plan.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/plan/post_daily_plan.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/router/router.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/solution/api_create_solution.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/solution/api_delete_solution.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/solution/api_update_solution.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/subject/api_create_subject.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/subject/api_delete_subject.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/subject/api_get_subject.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/subject/api_get_subjects.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/subject/api_update_subject.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/task/api_create_task.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/task/api_delete_task.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/task/api_get_task.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/task/api_get_tasks.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/task/api_update_task.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/user/api_ban_user.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/user/api_create_user.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/user/api_get_user.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/user/api_login.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/collections/get_collections.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/comments/get_comment.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/comments/get_comments.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/groups/get_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_collection_id.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_comment_id.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_solution_id.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_subject_id.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_task_id.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/groups/get_groups.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/groups/grouppen.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/init.sql" dialect="PostgreSQL" />

@@ -1,5 +1,5 @@
 drop function if exists src_get_solutions;
-create function src_get_solutions(usr_id integer, ts_id integer, perPage integer, page integer)
+create function src_get_solutions(usr_id integer, usr_type user_type, ts_id integer, perPage integer, page integer)
 returns TABLE (solution_id integer, solution text, can_modify boolean)
 as
 $$

@@ -11,7 +11,8 @@
 CREATE TYPE result_type AS (
     success BOOLEAN,
     error TEXT,
-    error_field TEXT
+    error_field TEXT,
+    entity_id integer
 );
 CREATE TYPE user_type AS ENUM ('default', 'moderator');
 CREATE TYPE group_type AS ENUM ('all', 'personal', 'default');
@@ -88,7 +89,7 @@ CREATE TABLE user_task (
     is_blocked BOOLEAN DEFAULT FALSE,
     repeat_index INTEGER DEFAULT 0,
     last_repeat_date TIMESTAMP DEFAULT NOW(),
-    next_repeat_date TIMESTAMP,
+    next_repeat_date TIMESTAMP DEFAULT NOW(),
     PRIMARY KEY (task_id, user_id)
 );
 
@@ -107,4 +108,3 @@ CREATE TABLE comment (
     creator_id INTEGER DEFAULT 0 REFERENCES users(user_id) ON DELETE SET DEFAULT,
     text TEXT NOT NULL CHECK (LENGTH(text) <= 1000)
 );
-

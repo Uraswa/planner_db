@@ -12,7 +12,7 @@ begin
     SELECT
     com.comment_id as comment_id,
     com.text as text,
-    (gm.is_creator or com.creator_id = usr_id) as can_modify
+    (com.creator_id = usr_id) as can_modify
     FROM comment com
     JOIN solution s ON (s.solution_id = com.comment_id)
     JOIN task ts ON (ts.task_id = s.task_id)
