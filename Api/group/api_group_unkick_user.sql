@@ -1,5 +1,5 @@
-drop function if exists api_group_kick_user;
-create function api_group_kick_user(usr_id integer, usr_type user_type, json jsonb) returns json
+drop function if exists api_group_unkick_user;
+create function api_group_unkick_user(usr_id integer, usr_type user_type, json jsonb) returns json
 as
 $$
 declare
@@ -27,7 +27,7 @@ begin
         return json_build_object('success', false, 'error', 'Кик пользователя из данной группы невозможен');
     end if;
 
-    UPDATE group_member g SET is_banned = TRUE WHERE g.group_id = entity_id AND g.user_id = user2kick RETURNING g.group_id INTO entity_id;
+    UPDATE group_member g SET is_banned = false WHERE g.group_id = entity_id AND g.user_id = user2kick RETURNING g.group_id INTO entity_id;
 
     IF entity_id IS NOT NULL THEN
         return json_build_object('success', true);

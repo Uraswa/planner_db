@@ -29,7 +29,7 @@ begin
         gr.group_type,
         gr.invite_link
         FROM user_group gr
-        JOIN group_member gm on (gr.group_id = gm.group_id and gm.user_id = usr_id)
+        JOIN group_member gm on (gr.group_id = gm.group_id and gm.user_id = usr_id and gm.is_banned = FALSE)
         OFFSET offst
         LIMIT perPage;
     end if;

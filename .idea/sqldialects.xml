@@ -15,8 +15,10 @@
     <file url="file://$PROJECT_DIR$/Api/group/api_delete_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_exit_from_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_get_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_get_group_info.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_get_groups.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_group_kick_user.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/group/api_group_unkick_user.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/group/api_update_group.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/plan/get_daily_plan.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/plan/post_daily_plan.sql" dialect="PostgreSQL" />
