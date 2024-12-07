@@ -108,3 +108,22 @@ CREATE TABLE comment (
     creator_id INTEGER DEFAULT 0 REFERENCES users(user_id) ON DELETE SET DEFAULT,
     text TEXT NOT NULL CHECK (LENGTH(text) <= 1000)
 );
+
+create table history
+(
+    task_id integer not null,
+    date    date    not null,
+    user_id integer not null
+);
+
+alter table history
+    add constraint history_task_task_id_fk
+        foreign key (task_id) references task
+            on delete cascade;
+
+alter table history
+    add constraint history_users_user_id_fk
+        foreign key (user_id) references users;
+
+CREATE USER new_user WITH PASSWORD 'password123';
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO new_user;

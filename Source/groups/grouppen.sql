@@ -56,11 +56,11 @@ CREATE OR REPLACE FUNCTION src_add_user_to_group_by_invitation_link(usr_id integ
 $$
 DECLARE
     result result_type;
-    gr_id boolean;
+    gr_id integer;
     get_group_query text;
 BEGIN
 
-    get_group_query := 'SELECT group_id FROM user_group WHERE invite_link = $1';
+    get_group_query := 'SELECT group_id FROM user_group WHERE invite_link = $1 and group_type = ''default''';
     EXECUTE get_group_query INTO gr_id USING inv_link;
 
     IF gr_id IS NOT NULL THEN
@@ -140,6 +140,3 @@ BEGIN
 
 END;
 $$ LANGUAGE plpgsql;
-
--- SELECT create_group('test', 'all');
-SELECT * FROM src_create_group_and_add_user(1, 'group_name2', 'default');

@@ -1,5 +1,5 @@
 drop function if exists api_get_daily_plan;
-create function api_get_daily_plan(usr_id integer, usr_type user_type) RETURNS jsonb
+create function api_get_daily_plan(usr_id integer, usr_type user_type, json jsonb) RETURNS jsonb
 as
 $$
     declare
@@ -25,6 +25,8 @@ begin
     JOIN subject s on c.subject_id = s.subject_id
     JOIN group_member gm  on gm.user_id = usr_id and gm.group_id = s.group_id and gm.is_banned = FALSE
     JOIN user_task ut on ut.task_id = t.task_id and ut.is_creator = TRUE
+    LEFT JOIN user_task utcur on utcur.task_id = t.task_id and utcur.user_id = usr_id
+    WHERE utcur.user_id IS NULL
     LIMIT 10
     LOOP
         IF current_diff_to_learn + task_row.difficulty <= max_diff_to_learn THEN
@@ -66,7 +68,10 @@ begin
         end if;
     end loop;
 
-    RETURN (SELECT jsonb_agg(elem) FROM unnest(result_tasks) AS elem);
+    RETURN (SELECT json_build_object(
+        'tasks', (SELECT jsonb_agg(elem) FROM unnest(result_tasks) AS elem),
+        'intervals', (SELECT json_agg(i) FROM repeat_interval i WHERE i.creator_id = usr_id or i.interval_id = 0)
+        ));
 end;
 $$ language plpgsql;
-SELECT * FROM api_get_daily_plan(19, 'moderator')
+SELECT * FROM api_get_daily_plan(26, 'moderator', '{}')

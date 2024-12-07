@@ -26,6 +26,7 @@
     <file url="file://$PROJECT_DIR$/Api/solution/api_create_solution.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/solution/api_delete_solution.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/solution/api_update_solution.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Api/statistics/api_get_daily_statistics.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/subject/api_create_subject.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/subject/api_delete_subject.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Api/subject/api_get_subject.sql" dialect="PostgreSQL" />
@@ -51,10 +52,13 @@
     <file url="file://$PROJECT_DIR$/Source/groups/get_group_by_task_id.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/groups/get_groups.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/groups/grouppen.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/groups/groups_view.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/init.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/intervals/src_calculate_next_repeat_date.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/solutions/get_solutions.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/subjects/get_subjects.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/tasks/get_tasks.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Source/triggers/add_history_trigger.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Source/users/user.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/test_func.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/tests/users/test_add_user.sql" dialect="PostgreSQL" />
